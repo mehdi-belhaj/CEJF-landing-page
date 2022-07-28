@@ -5,6 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CEJF</title>
+    <!-- Font -->
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Handlee"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Dancing Script"
+      rel="stylesheet"
+    />
+    <!-- Css -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
@@ -13,37 +24,84 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mobile-style.css" />
+    <link rel="stylesheet" href="helper.css" />
   </head>
   <body>
     <!-- * Navebar -->
-    <nav>
+    <!-- Hero -> Services -> How-to-use -> About -> Contact -->
+    <nav id="navbar">
       <div class="logo">
-        <img src="" alt="logo de Caisse de l'Ecole" />
+        <a onclick="goToTop()">
+          <img
+            src="assets/logo/logo-navbar.svg"
+            alt="logo de Caisse de l'Ecole"
+          />
+        </a>
       </div>
       <ul>
-        <li>Services</li>
-        <li>Nouvel Adhérent ?</li>
-        <li>À Propos</li>
-        <li>Contact</li>
+        <li><a href="#Services">Services</a></li>
+        <li><a href="#How-to-use">Nouvel Adhérent ?</a></li>
+        <li><a href="#About">À Propos</a></li>
+        <li><a href="#Contact">Contact</a></li>
       </ul>
     </nav>
-
+    <button onclick="goToTop()" id="gotoTopBtn" title="Go to top">
+      <svg
+        width="52"
+        height="42"
+        viewBox="0 0 52 42"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M27.1852 40.6321L50.5267 21.9634C50.8422 21.711 50.9969 21.3799 50.9938 21.0501C50.9938 21.0402 51 21.0327 51 21.0227V2.28392C51 1.59433 50.3003 1.03467 49.4381 1.03467C49.4256 1.03467 49.4162 1.03967 49.4037 1.03967C48.9914 1.03842 48.5774 1.16209 48.2619 1.41319L26.0106 19.21L3.71247 1.37571C3.08613 0.874763 2.07088 0.874763 1.44455 1.37571C1.07281 1.67303 0.949406 2.07654 1.01813 2.46256V20.8403C0.949406 21.2263 1.07281 21.6298 1.44455 21.9271L24.8298 40.6309C25.1547 40.8907 25.5827 41.0094 26.0091 40.9994C26.4324 41.0094 26.8603 40.8907 27.1852 40.6321Z"
+          fill="#E6ECF2"
+          fill-opacity="0.6"
+          stroke="#212529"
+          stroke-width="2"
+        />
+      </svg>
+    </button>
     <!-- * Section 1 : Hero -->
     <section id="Hero">
-      <div class="hero-content">
+      <div class="hero-container">
         <div class="title">
           <h1>
             Bienvenue chez
             <span> Caisse de l’Ecole Jean de la Fontaine </span>
           </h1>
+          <div class="cta">
+            <button class="cta-primary noselect">Nouvel Adhérent ?</button>
+            <button class="cta-secondary noselect">
+              Accéder à votre espace
+              <i class="cejf-icon-arrow">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="26"
+                  height="12"
+                  viewBox="0 0 26 12"
+                >
+                  <path
+                    d="M25.6569 6.01454L24.2463 4.59668L20.0146 0.343124L18.5967 1.75369L21.8264 4.99998L6.77051e-06 4.99998L7.10943e-06 6.99998L21.8306 6.99998L18.5749 10.2389L19.9854 11.6568L24.239 7.4251L25.6569 6.01454Z"
+                  />
+                </svg>
+              </i>
+            </button>
+          </div>
         </div>
-        <button class="cta-primary">Nouvel Adhérent ?</button>
-        <button class="cta-secondary">Accéder à votre espace</button>
-      </div>
-      <div class="hero-picture">
-        <img src="" alt="hero de Caisse de l'Ecole" />
+        <div class="hero-logo noselect">
+          <img
+            src="assets/logo/logo-hero.svg"
+            alt="hero de Caisse de l'Ecole"
+          />
+        </div>
       </div>
     </section>
+
+    <!-- ? wave 1 -->
+    <!-- <img class="wave" src="assets/wave/wave-1.svg" alt="Wave used for style" /> -->
 
     <!-- * Section 2 : Services -->
     <section id="Services">
@@ -70,48 +128,185 @@
         <!-- Service 1 -->
         <div class="service-card">
           <div class="service-title">
-            <h6>ACHAT GROUPÉ DES FOURNITURES</h6>
+            <h4>Achat groupé de fournitures</h4>
           </div>
           <div class="service-description">
             <p>
               Dans le cadre de solidarité entre ses membres la caisse de l’école
-              propose à ses adhérents ...
+              propose à ses adhérents le service ...
             </p>
           </div>
           <div class="service-footer">
-            <a href="#" class="show-details">Plus d’info</a>
+            <a href="#" class="show-details">
+              Plus d’info
+              <svg
+                width="6"
+                height="9"
+                viewBox="0 0 6 9"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0.205986 8.82374C0.479697 9.05875 0.920986 9.05875 1.1947 8.82374L5.83661 4.83813C6.05446 4.65108 6.05446 4.34892 5.83661 4.16187L1.1947 0.176259C0.920986 -0.058753 0.479697 -0.058753 0.205986 0.176259C-0.0677244 0.411271 -0.0677244 0.790168 0.205986 1.02518L4.25021 4.5024L0.200401 7.97962C-0.0677236 8.20983 -0.0677244 8.59353 0.205986 8.82374Z"
+                />
+              </svg>
+            </a>
           </div>
         </div>
         <!-- Service 2 -->
         <div class="service-card">
           <div class="service-title">
-            <h6>THEATRE</h6>
+            <h4>Théâtre</h4>
           </div>
           <div class="service-description">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut purus
-              velit, pharetra vel orci ...
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id,
+              unde.
             </p>
           </div>
           <div class="service-footer">
-            <a href="#" class="show-details">Plus d’info</a>
+            <a href="#" class="show-details">
+              Plus d’info
+              <svg
+                width="6"
+                height="9"
+                viewBox="0 0 6 9"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0.205986 8.82374C0.479697 9.05875 0.920986 9.05875 1.1947 8.82374L5.83661 4.83813C6.05446 4.65108 6.05446 4.34892 5.83661 4.16187L1.1947 0.176259C0.920986 -0.058753 0.479697 -0.058753 0.205986 0.176259C-0.0677244 0.411271 -0.0677244 0.790168 0.205986 1.02518L4.25021 4.5024L0.200401 7.97962C-0.0677236 8.20983 -0.0677244 8.59353 0.205986 8.82374Z"
+                />
+              </svg>
+            </a>
           </div>
         </div>
         <!-- Service 3 -->
         <div class="service-card">
           <div class="service-title">
-            <h6>MUSIQUE</h6>
+            <h4>MUSIQUE</h4>
           </div>
           <div class="service-description">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut purus
-              velit, pharetra vel orci ...
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat
+              quod totam ipsa laboriosam tenetur? Et ipsum architecto pariatur
+              atque mollitia velit fuga accusamus nesciunt similique tempora,
+              eligendi dolore dicta sed. Nihil nam natus officia, magni
+              molestiae quasi dolorum exercitationem assumenda debitis possimus
+              mollitia doloremque obcaecati officiis excepturi. Velit, alias
+              quia earum qui atque consectetur, ut sit quaerat vitae ex sequi?
             </p>
           </div>
           <div class="service-footer">
-            <a href="#" class="show-details">Plus d’info</a>
+            <a href="#" class="show-details">
+              Plus d’info
+              <svg
+                width="6"
+                height="9"
+                viewBox="0 0 6 9"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0.205986 8.82374C0.479697 9.05875 0.920986 9.05875 1.1947 8.82374L5.83661 4.83813C6.05446 4.65108 6.05446 4.34892 5.83661 4.16187L1.1947 0.176259C0.920986 -0.058753 0.479697 -0.058753 0.205986 0.176259C-0.0677244 0.411271 -0.0677244 0.790168 0.205986 1.02518L4.25021 4.5024L0.200401 7.97962C-0.0677236 8.20983 -0.0677244 8.59353 0.205986 8.82374Z"
+                />
+              </svg>
+            </a>
           </div>
         </div>
+
+        <!-- <div class="service-card">
+          <div class="service-title">
+            <h4>MUSIQUE 1</h4>
+          </div>
+          <div class="service-description">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat
+              quod totam ipsa laboriosam tenetur? Et ipsum architecto pariatur
+              atque mollitia velit fuga accusamus nesciunt similique tempora,
+              eligendi dolore dicta sed. Nihil nam natus officia, magni
+              molestiae quasi dolorum exercitationem assumenda debitis possimus
+              mollitia doloremque obcaecati officiis excepturi. Velit, alias
+              quia earum qui atque consectetur, ut sit quaerat vitae ex sequi?
+            </p>
+          </div>
+          <div class="service-footer">
+            <a href="#" class="show-details">
+              Plus d’info
+              <svg
+                width="6"
+                height="9"
+                viewBox="0 0 6 9"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0.205986 8.82374C0.479697 9.05875 0.920986 9.05875 1.1947 8.82374L5.83661 4.83813C6.05446 4.65108 6.05446 4.34892 5.83661 4.16187L1.1947 0.176259C0.920986 -0.058753 0.479697 -0.058753 0.205986 0.176259C-0.0677244 0.411271 -0.0677244 0.790168 0.205986 1.02518L4.25021 4.5024L0.200401 7.97962C-0.0677236 8.20983 -0.0677244 8.59353 0.205986 8.82374Z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-title">
+            <h4>MUSIQUE 2</h4>
+          </div>
+          <div class="service-description">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat
+              quod totam ipsa laboriosam tenetur? Et ipsum architecto pariatur
+              atque mollitia velit fuga accusamus nesciunt similique tempora,
+              eligendi dolore dicta sed. Nihil nam natus officia, magni
+              molestiae quasi dolorum exercitationem assumenda debitis possimus
+              mollitia doloremque obcaecati officiis excepturi. Velit, alias
+              quia earum qui atque consectetur, ut sit quaerat vitae ex sequi?
+            </p>
+          </div>
+          <div class="service-footer">
+            <a href="#" class="show-details">
+              Plus d’info
+              <svg
+                width="6"
+                height="9"
+                viewBox="0 0 6 9"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0.205986 8.82374C0.479697 9.05875 0.920986 9.05875 1.1947 8.82374L5.83661 4.83813C6.05446 4.65108 6.05446 4.34892 5.83661 4.16187L1.1947 0.176259C0.920986 -0.058753 0.479697 -0.058753 0.205986 0.176259C-0.0677244 0.411271 -0.0677244 0.790168 0.205986 1.02518L4.25021 4.5024L0.200401 7.97962C-0.0677236 8.20983 -0.0677244 8.59353 0.205986 8.82374Z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-title">
+            <h4>MUSIQUE 3</h4>
+          </div>
+          <div class="service-description">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat
+              quod totam ipsa laboriosam tenetur? Et ipsum architecto pariatur
+              atque mollitia velit fuga accusamus nesciunt similique tempora,
+              eligendi dolore dicta sed. Nihil nam natus officia, magni
+              molestiae quasi dolorum exercitationem assumenda debitis possimus
+              mollitia doloremque obcaecati officiis excepturi. Velit, alias
+              quia earum qui atque consectetur, ut sit quaerat vitae ex sequi?
+            </p>
+          </div>
+          <div class="service-footer">
+            <a href="#" class="show-details">
+              Plus d’info
+              <svg
+                width="6"
+                height="9"
+                viewBox="0 0 6 9"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0.205986 8.82374C0.479697 9.05875 0.920986 9.05875 1.1947 8.82374L5.83661 4.83813C6.05446 4.65108 6.05446 4.34892 5.83661 4.16187L1.1947 0.176259C0.920986 -0.058753 0.479697 -0.058753 0.205986 0.176259C-0.0677244 0.411271 -0.0677244 0.790168 0.205986 1.02518L4.25021 4.5024L0.200401 7.97962C-0.0677236 8.20983 -0.0677244 8.59353 0.205986 8.82374Z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div> -->
       </div>
     </section>
 
@@ -129,7 +324,7 @@
       <div class="how-to-use-container">
         <!-- step 1 -->
         <div class="step">
-          <div class="arrow"><img src="" alt="" /></div>
+          <div class="chevron"><img src="" alt="" /></div>
           <div class="illustration">
             <div class="number">1</div>
             <div class="circle">
@@ -146,8 +341,8 @@
         </div>
         <!-- step 2 -->
         <div class="step">
-          <div class="arrow"><img src="" alt="" /></div>
-          <div class="arrow"><img src="" alt="" /></div>
+          <div class="chevron"><img src="" alt="" /></div>
+          <div class="chevron"><img src="" alt="" /></div>
           <div class="illustration">
             <div class="number">2</div>
             <div class="circle">
@@ -167,9 +362,9 @@
         </div>
         <!-- step 3 -->
         <div class="step">
-          <div class="arrow"><img src="" alt="" /></div>
-          <div class="arrow"><img src="" alt="" /></div>
-          <div class="arrow"><img src="" alt="" /></div>
+          <div class="chevron"><img src="" alt="" /></div>
+          <div class="chevron"><img src="" alt="" /></div>
+          <div class="chevron"><img src="" alt="" /></div>
           <div class="illustration">
             <div class="number">3</div>
             <div class="circle">
@@ -189,10 +384,10 @@
         </div>
         <!-- step 4 -->
         <div class="step">
-          <div class="arrow"><img src="" alt="" /></div>
-          <div class="arrow"><img src="" alt="" /></div>
-          <div class="arrow"><img src="" alt="" /></div>
-          <div class="arrow"><img src="" alt="" /></div>
+          <div class="chevron"><img src="" alt="" /></div>
+          <div class="chevron"><img src="" alt="" /></div>
+          <div class="chevron"><img src="" alt="" /></div>
+          <div class="chevron"><img src="" alt="" /></div>
           <div class="illustration">
             <div class="number">4</div>
             <div class="circle">
