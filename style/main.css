@@ -1,5 +1,5 @@
 :root {
-  --primary: rgb(15, 149, 170);
+  --primary: #17A2B8;
   --primary-variant: rgb(32, 225, 255);
 
   --dark: rgb(33, 37, 41);
@@ -13,6 +13,11 @@
 html {
   scroll-behavior: smooth;
 }
+
+body {
+  overflow-x: hidden;
+}
+
 a {
   text-decoration: none;
 }
@@ -50,6 +55,7 @@ nav ul li {
   font-weight: 600;
 }
 
+
 nav ul li a {
   padding: 1rem;
   color: var(--dark);
@@ -64,6 +70,11 @@ nav ul li a.active {
   color: var(--primary);
 }
 
+/* *** Sections *** */
+
+section {
+  position: relative;
+}
 
 /* *** Hero *** */
 #Hero {
