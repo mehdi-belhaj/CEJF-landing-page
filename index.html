@@ -51,52 +51,6 @@
       <!-- Goto Top -->
     </button>
 
-    <div class="wave wave-4"></div>
-    <!-- * Section 5 : Contact us -->
-    <section id="Contact">
-      <div class="header">
-        <h1 class="title">Contacter Nous !</h1>
-      </div>
-      <div class="form">
-        <div class="firt-part">
-          <img
-            src="/assets/illustration/contact.png"
-            alt="illustration contacter nous"
-          />
-          <div class="fields">
-            <input
-              type="text"
-              name="name"
-              id="name"
-              placeholder="Votre Nom *"
-            />
-            <input
-              type="text"
-              name="email"
-              id="email"
-              placeholder="Votre Email *"
-            />
-            <input
-              type="text"
-              name="object"
-              id="object"
-              placeholder="Objet du message ... *"
-            />
-          </div>
-        </div>
-        <div class="second-part">
-          <textarea
-            class="message"
-            name="message"
-            id="message"
-            placeholder="Votre message"
-            rows="4"
-          ></textarea>
-          <button class="contact-submit-btn">Envoyer</button>
-        </div>
-      </div>
-    </section>
-
     <!-- * Section 1 : Hero -->
     <section id="Hero">
       <div class="header">
@@ -513,37 +467,64 @@
       </div>
     </section>
 
-    <!-- ? wave 4 -->
     <div class="wave wave-4"></div>
     <!-- * Section 5 : Contact us -->
     <section id="Contact">
       <div class="header">
         <h1 class="title">Contacter Nous !</h1>
       </div>
-      <div class="contact-container">
-        <div class="contact-illustration">
-          <img src="" alt="illustration contacter nous" />
+      <form class="form">
+        <div class="first-part">
+          <img
+            src="/assets/illustration/contact.png"
+            alt="illustration contacter nous"
+          />
+          <div class="fields">
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Votre Nom *"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Votre Email *"
+              required
+            />
+            <input
+              type="text"
+              name="object"
+              id="object"
+              placeholder="Objet du message ... *"
+              required
+            />
+          </div>
         </div>
-        <input type="text" name="name" id="name" placeholder="Votre Nom *" />
-        <input
-          type="text"
-          name="email"
-          id="email"
-          placeholder="Votre Email *"
-        />
-        <input
-          type="text"
-          name="object"
-          id="object"
-          placeholder="Objet du message ... *"
-        />
-        <textarea
-          name="message"
-          id="message"
-          placeholder="Votre message"
-        ></textarea>
-        <button class="contact-submit-btn">Envoyer</button>
-      </div>
+        <div class="second-part">
+          <textarea
+            class="message"
+            name="message"
+            id="message"
+            placeholder="Votre message"
+            required
+          ></textarea>
+          <button type="submit" class="contact-submit-btn">
+            Envoyer
+            <svg 
+              width="26" 
+              height="24" 
+              viewBox="0 0 26 24" 
+              fill="none" 
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M2.02822 11.1788H11.3371C11.7663 11.1788 11.9925 11.6364 11.98 12.0704C11.9688 12.4621 11.7632 12.8347 11.3371 12.8347L2.02822 12.8771L0.171317 20.3023C-0.560054 22.5232 1.14648 24.7005 3.4625 23.786L24.6723 14.3363C26.5414 13.2477 26.3789 10.3736 24.5504 9.58977L3.25934 0.140177C1.34964 -0.512944 -0.519427 1.18529 0.171315 3.79808L2.02822 11.1788Z"/>
+            </svg>  
+          </button>
+        </div>
+      </form>
     </section>
 
     <footer>
@@ -554,7 +535,7 @@
       </div>
       <img src="/assets/logo/logo-footer.svg" alt="logo de Caisse de l'Ecole" />
       <div class="login">
-        <a href="#">Espace Admin</a>
+        <a href="/login.html">Espace Admin</a>
         <svg
           class="arrow-link"
           width="26"

@@ -220,7 +220,7 @@ section .text {
 }
 
 section#Services .content {
-  width: calc(100vw * 2 / 3);
+  width: calc(100vw * 3 / 4);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -354,18 +354,18 @@ input, textarea {
   font-weight: 400;
 }
 
-.firt-part {
+.first-part {
   display: flex;
   flex-direction: row-reverse;
   gap: calc(var(--gap) * 2);
   justify-content: end;
 }
 
-.firt-part img {
+.first-parts img {
   height: 240px;
 }
 
-.firt-part .fields {
+.first-part .fields {
   display: flex;
   flex-direction: column;
   width: 30rem;
@@ -374,15 +374,18 @@ input, textarea {
 
 .second-part {
   position: relative;
+  margin-block-end: 3rem;
 }
 
 .second-part textarea {
-  width: calc(100% - 1.5rem);
+  min-width: calc(100% - 1.5rem);
+  height: 8rem;
 }
 
 .second-part .contact-submit-btn {
-  padding: .75em 1em;
+  padding: .75em 1.25em;
   font-size: 18px;
+  border-radius: 8px;
   background-color: var(--dark);
   color: var(--light);
   position: absolute;
@@ -390,8 +393,16 @@ input, textarea {
   right: 6px;
 }
 
-.second-part .contact-submit-btn:hover {
-  
+.second-part .contact-submit-btn svg {
+  fill: var(--light);
+  margin-inline-start: .5em;
+  vertical-align: middle;
+  transition: var(--delay);
+}
+
+.second-part .contact-submit-btn:hover svg {
+  transform: translateX(.5em);
+  /* transform: translateX(1rem); */
 }
 
 
