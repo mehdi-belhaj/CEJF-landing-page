@@ -3,7 +3,7 @@ goToTopBtn = document.getElementById("gotoTopBtn");
 
 window.onscroll = function () {
   userScrolling(); // used to show and hide the go to top button
-  dynamicActiveNav();  // used to highlight the active nav link
+  dynamicActiveNav(); // used to highlight the active nav link
 };
 
 function userScrolling() {
@@ -36,7 +36,6 @@ function dynamicActiveNav() {
   ht = document.getElementById("About").offsetHeight;
   console.log(ht);
 }
-
 
 function clearActiveNav(elements) {
   for (let j = 0; j < elements.length; j++) {

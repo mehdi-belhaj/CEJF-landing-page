@@ -30,7 +30,6 @@
   </head>
   <body>
     <!-- * Navebar -->
-    <!-- Hero -> Services -> How-to-use -> About -> Contact -->
     <nav id="navbar">
       <div class="logo">
         <a onclick="goToTop()">
@@ -59,8 +58,8 @@
           <span> Caisse de l’Ecole Jean de la Fontaine </span>
         </h1>
         <div class="cta">
-          <button class="cta-primary noselect">Nouvel Adhérent ?</button>
-          <button class="cta-secondary noselect">
+          <button class="cta-primary no-select">Nouvel Adhérent ?</button>
+          <button class="cta-secondary no-select">
             Accéder à votre espace
             <svg
               class="arrow-link"
@@ -79,7 +78,7 @@
           </button>
         </div>
       </div>
-      <div class="hero-logo noselect">
+      <div class="hero-logo no-select">
         <!-- <img
           src="assets/logo/logo-hero.svg"
           alt="hero de Caisse de l'Ecole"
@@ -343,91 +342,102 @@
     <section id="How-to-use">
       <div class="header">
         <h1 class="title">Nouvelle Adhésion !</h1>
-      </div>
-      <div class="text">
-        <p>
-          Voici les étapes à suivre pour profiter des services de l'association
-          :
-        </p>
+        <div class="text">
+          <p>
+            Voici les étapes à suivre pour profiter des services de
+            l'association :
+          </p>
+        </div>
       </div>
       <div class="how-to-use-container">
+        <div class="chevron">
+          <img src="assets/icons/chevron.svg" alt="" />
+        </div>
         <!-- step 1 -->
-        <div class="step">
-          <div class="chevron"><img src="" alt="" /></div>
+        <div class="step odd">
           <div class="illustration">
-            <div class="number">1</div>
+            <div class="number"><p>1</p></div>
             <div class="circle">
-              <img src="" alt="illustration de l'Etape 1 : Pré-inscription" />
+              <img
+                src="/assets/illustration/step-1.png"
+                alt="illustration de l'Etape 1 : Pré-inscription"
+              />
             </div>
           </div>
           <div class="step-content">
-            <h6 class="title">Etape 1 : Pré-inscription</h6>
+            <h4 class="title">Etape 1 : Pré-inscription</h4>
             <p>
               Vous devez d'abord vous inscrire au site pour que le responsable
               peut vous identifier.
             </p>
           </div>
         </div>
+        <div class="chevron">
+          <img src="assets/icons/chevron.svg" alt="" />
+          <img src="assets/icons/chevron.svg" alt="" />
+        </div>
         <!-- step 2 -->
-        <div class="step">
-          <div class="chevron"><img src="" alt="" /></div>
-          <div class="chevron"><img src="" alt="" /></div>
+        <div class="step even">
           <div class="illustration">
-            <div class="number">2</div>
+            <div class="number"><p>2</p></div>
             <div class="circle">
               <img
-                src=""
+                src="/assets/illustration/step-2.png"
                 alt="illustration de l'Etape 2 : Vérification de vos données"
               />
             </div>
           </div>
           <div class="step-content">
-            <h6 class="title">Etape 2 : Vérification de vos données</h6>
+            <h4 class="title">Etape 2 : Vérification de vos données</h4>
             <p>
               Après la pré-inscription, une fois que votre demande est traitée,
               vous allez recevoir un email de l'association.
             </p>
           </div>
         </div>
+        <div class="chevron">
+          <img src="assets/icons/chevron.svg" alt="" />
+          <img src="assets/icons/chevron.svg" alt="" />
+          <img src="assets/icons/chevron.svg" alt="" />
+        </div>
         <!-- step 3 -->
-        <div class="step">
-          <div class="chevron"><img src="" alt="" /></div>
-          <div class="chevron"><img src="" alt="" /></div>
-          <div class="chevron"><img src="" alt="" /></div>
+        <div class="step odd">
           <div class="illustration">
-            <div class="number">3</div>
             <div class="circle">
+              <div class="number"><p>3</p></div>
               <img
-                src=""
+                src="/assets/illustration/step-3.png"
                 alt="illustration de l'Etape 3 : Passer une demande"
               />
             </div>
           </div>
           <div class="step-content">
-            <h6 class="title">Etape 3 : Passer une demande</h6>
+            <h4 class="title">Etape 3 : Passer une demande</h4>
             <p>
               Après l'étape 2, vous pouvez faire (ou consulter) vos demandes
               d'adhésion / inscription an(x) service(s).
             </p>
           </div>
         </div>
+        <div class="chevron">
+          <img src="assets/icons/chevron.svg" alt="" />
+          <img src="assets/icons/chevron.svg" alt="" />
+          <img src="assets/icons/chevron.svg" alt="" />
+          <img src="assets/icons/chevron.svg" alt="" />
+        </div>
         <!-- step 4 -->
-        <div class="step">
-          <div class="chevron"><img src="" alt="" /></div>
-          <div class="chevron"><img src="" alt="" /></div>
-          <div class="chevron"><img src="" alt="" /></div>
-          <div class="chevron"><img src="" alt="" /></div>
+        <div class="step even">
           <div class="illustration">
-            <div class="number">4</div>
+            <div class="number"><p>4</p></div>
             <div class="circle">
               <img
-                src=""
+                src="/assets/illustration/step-4.png"
                 alt="illustration de l'Etape 4 : Finaliser votre demande"
               />
             </div>
           </div>
           <div class="step-content">
-            <h6 class="title">Etape 4 : Finaliser votre demande</h6>
+            <h4 class="title">Etape 4 : Finaliser votre demande</h4>
             <p>
               Votre demande sera validée automatiquement par le responsable une
               fois que vous payerez les frais.
@@ -513,15 +523,17 @@
           ></textarea>
           <button type="submit" class="contact-submit-btn">
             Envoyer
-            <svg 
-              width="26" 
-              height="24" 
-              viewBox="0 0 26 24" 
-              fill="none" 
+            <svg
+              width="26"
+              height="24"
+              viewBox="0 0 26 24"
+              fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path d="M2.02822 11.1788H11.3371C11.7663 11.1788 11.9925 11.6364 11.98 12.0704C11.9688 12.4621 11.7632 12.8347 11.3371 12.8347L2.02822 12.8771L0.171317 20.3023C-0.560054 22.5232 1.14648 24.7005 3.4625 23.786L24.6723 14.3363C26.5414 13.2477 26.3789 10.3736 24.5504 9.58977L3.25934 0.140177C1.34964 -0.512944 -0.519427 1.18529 0.171315 3.79808L2.02822 11.1788Z"/>
-            </svg>  
+              <path
+                d="M2.02822 11.1788H11.3371C11.7663 11.1788 11.9925 11.6364 11.98 12.0704C11.9688 12.4621 11.7632 12.8347 11.3371 12.8347L2.02822 12.8771L0.171317 20.3023C-0.560054 22.5232 1.14648 24.7005 3.4625 23.786L24.6723 14.3363C26.5414 13.2477 26.3789 10.3736 24.5504 9.58977L3.25934 0.140177C1.34964 -0.512944 -0.519427 1.18529 0.171315 3.79808L2.02822 11.1788Z"
+              />
+            </svg>
           </button>
         </div>
       </form>
